@@ -5,4 +5,4 @@ Il programma oil2csvmypay permette di effettuare la conversione dei file relativ
 Il programma consente di avere in input diversi file contenenti i giornali di cassa relativi a più giorni e va a generare un unico file di output da caricare su MyPivot. 
 
 I.P.A.B. LA C.A.S.A. Centro Assistenza Servizi per Anziani
-Sviluppatore: Roncaglia Stefano - s.roncaglia "chiocciola" lacasaschio.it
+<br />Sviluppatore: Roncaglia Stefano - s.roncaglia "chiocciola" lacasaschio.it
