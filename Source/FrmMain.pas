@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, JvToolEdit, Vcl.StdCtrls, Vcl.Mask,
   JvExMask, Vcl.ComCtrls, Xml.xmldom, Xml.XMLIntf, Data.DB, Datasnap.DBClient,
   Xml.XMLDoc, Vcl.Grids, Vcl.DBGrids, JvComponentBase, JvDBGridExport, System.Zip,
-  Vcl.Buttons;
+  Vcl.Buttons, MidasLib;
 
 type
   TFrmPrincipale = class(TForm)
@@ -68,8 +68,12 @@ begin
       end;
     end;
 
+    //ShowMessage('Prima di creazione dataset');
+
     // creo il dataset temporaneo
     CdsTemp.CreateDataSet;
+
+    //ShowMessage('Dopo creazione dataset');
 
     if EdtSelectedOILFile.Text <> ''  then
     begin
@@ -154,8 +158,13 @@ var
   sTipoMovimento, sTipoOperazione, sCliente, sCausale, sOrdinante, sImporto,
   sDatamovimento, sDataValuta, sNumeroBolletta: String;
 begin
+
+  //ShowMessage('Prima di lettura file');
+
   // leggo il documento specificato
   XMLSource.LoadFromFile(sFileName);
+
+  //ShowMessage('file xml caricato');
 
   Memo1.Lines.Text := XMLSource.XML.Text;
 
